@@ -29,10 +29,10 @@ iframe {
   border: none; /* Or border: 0; */
 }
 .hero { 
-  background-image: url("images/content/aarhus.JPEG");
-  background-size: 100% 100%; /* Show the whole image */
+  background-image: url("images/content/fika-hero.jpg");
+  background-size: cover; /* Show the whole image */
   background-repeat: no-repeat;
-  min-height: 600px; 
+  min-height: 800px; 
   max-width: 4000px;
   margin: 0; 
   display: flex;
@@ -62,8 +62,8 @@ iframe {
 
 .logo {
     position: absolute; /* Position it relative to the hero section */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
     z-index: 10; /* Ensure the logo is on top of other content */
 }
 
@@ -83,7 +83,7 @@ iframe {
 nav {
     display: flex;
     flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align to the left */
+    align-items: center; /* Align to the left */
     position: absolute;
     top: 50%;
     left: 100px;
@@ -128,11 +128,11 @@ nav li a:hover {
 .hero .cafe-name {
     position: absolute;
     bottom: 20px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
+    right: 100px; /* Distance from the right */
     font-family: 'Made Sunflower';
     letter-spacing: 5px;
     font-weight: bold;
-    font-size: 90px;
+    font-size: 100px;
     color: #fffca4;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional shadow for readability */
 }
@@ -140,6 +140,7 @@ nav li a:hover {
 
 @media (max-width: 768px) {
     .hero { 
+        background-image: url("images/content/fika-mobile.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         min-height: 100%; 

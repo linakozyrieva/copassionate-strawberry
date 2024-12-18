@@ -485,7 +485,7 @@ nav li a:hover {
 #mission-statement {
   background-color: #87A680; 
   padding: 1px;
-  height: 600px;
+  height: 700px;
   position: relative;
 }
 #mission-statement::before {
@@ -528,6 +528,7 @@ nav li a:hover {
   justify-content: space-between; /* Space between text and image */
   align-items: center; /* Vertically align items */
   margin-left: 100px;
+  margin-top: 70px;
 }
 
 #mission-statement .text-box h2 {
@@ -545,16 +546,22 @@ font-size: 19px;
 }
 
 #mission-statement .image {
-  width: 50%;
-  height: auto;
+  width: auto;
+  height: 100%; /* Let the height adjust accordingly */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  z-index: 1; 
 }
 
 
 #mission-statement .image img {
-  max-width: 100%; 
-  height: 600px;
+  max-width: 900px; 
+  height: 703px;
   object-fit: cover;
 }
+
 
 
 
@@ -681,18 +688,17 @@ font-size: 19px;
 
 #community .image-community {
   width: 100%;
-  height: auto; /* Let the height adjust accordingly */
+  height: 100%; /* Let the height adjust accordingly */
   position: absolute;
-  bottom: 0;
   left: 50%;
   transform: translateX(-50%); /* Center the image horizontally */
-  z-index: 1; /* Ensure the image is behind the content */
+  z-index: 1; 
 }
 
 
 #community .image-community img {
   max-width: 50%; 
-  height: auto;
+  height: 750px;
   object-fit: cover;
 }
 

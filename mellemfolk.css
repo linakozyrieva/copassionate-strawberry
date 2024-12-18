@@ -27,10 +27,10 @@ body::-webkit-scrollbar { /* Chrome, Safari and Opera */
 
 
 .hero { 
-  background-image: url("images/content/aarhus.JPEG");
+  background-image: url("images/content/mf-hero.jpg");
   background-size: 100% 100%; /* Show the whole image */
   background-repeat: no-repeat;
-  min-height: 600px; 
+  min-height: 700px; 
   max-width: 4000px;
   margin: 0; 
   display: flex;
@@ -60,8 +60,8 @@ body::-webkit-scrollbar { /* Chrome, Safari and Opera */
 
 .logo {
     position: absolute; /* Position it relative to the hero section */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
     z-index: 10; /* Ensure the logo is on top of other content */
 }
 
@@ -130,14 +130,15 @@ nav li a:hover {
     font-family: 'Made Sunflower';
     letter-spacing: 5px;
     font-weight: bold;
-    font-size: 90px;
+    font-size: 100px;
     color: #fffca4;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional shadow for readability */
 }
 
 
 @media (max-width: 768px) {
-    .hero { 
+    .hero {
+        background-image: url("images/content/mf-mobile.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         min-height: 100%; 

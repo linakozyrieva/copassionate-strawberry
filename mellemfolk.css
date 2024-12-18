@@ -225,13 +225,14 @@ nav li a:hover {
 
       .hero .cafe-name {
         position: absolute;
-        top: 150px; /* Distance from the bottom */
-        right: 0; /* Distance from the right */
+        top: 200px;
+        right: 0; 
+        left: 0;
         font-family: 'Made Sunflower';
         text-align: center;
         letter-spacing: 5px;
         font-weight: bold;
-        font-size: 60px;
+        font-size: 61px;
         color: #fffca4;
         text-shadow: none; 
     }

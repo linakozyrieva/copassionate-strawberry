@@ -29,7 +29,7 @@ iframe {
   border: none; /* Or border: 0; */
 }
 .hero { 
-  background-image: url("/images/content/aarhus.JPEG");
+  background-image: url("images/content/aarhus.JPEG");
   background-size: 100% 100%; /* Show the whole image */
   background-repeat: no-repeat;
   min-height: 600px; 

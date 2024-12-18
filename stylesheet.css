@@ -31,7 +31,7 @@ iframe {
 }
 
 .hero { 
-  background-image: url("/images/content/aarhus.JPEG");
+  background-image: url("images/content/aarhus.JPEG");
   background-size: cover; /* Show the whole image */
   background-repeat: no-repeat;
   min-height: 100%; 

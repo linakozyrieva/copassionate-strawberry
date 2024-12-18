@@ -1,0 +1,1371 @@
+
+/*---------------------------- HERO -------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap');
+
+@font-face {
+  font-family: 'Made Sunflower';
+  src: url('/fonts/MADE\ Sunflower\ PERSONAL\ USE.otf') format('woff2');
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  overflow-y: hidden; /* Prevent scrolling on the html element */
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll; 
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+body::-webkit-scrollbar { /* Chrome, Safari and Opera */
+  display: none;
+}
+
+iframe {
+  border: none; /* Or border: 0; */
+}
+
+.hero { 
+  background-image: url("/images/content/aarhus.JPEG");
+  background-size: cover; /* Show the whole image */
+  background-repeat: no-repeat;
+  min-height: 100%; 
+  max-width: 4000px;
+  margin: 0; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+  position: relative; /* To position the pseudo-element */
+  padding-bottom: 150px;
+}
+
+.hero::after { 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position at the bottom */
+    width: 100%;
+    height: 15px; 
+    background-image: 
+      repeating-linear-gradient(to right, 
+        #FFFCA4, /* Use your desired color */
+        #FFFCA4 10px, 
+        transparent 10px, 
+        transparent 20px
+      );
+    z-index: 1; /* Ensure it's above the background image */
+  }
+
+header { /* Add styles for the header background */
+  background-color: rgba(213, 155, 122, 0.58);
+  padding: 20px;
+  width: 100%;
+  height: 95px;
+  box-sizing: border-box; /* Include padding in the width calculation */
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative; 
+}
+
+header::after { 
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%); /* Center the line horizontally */
+  width: 100%; 
+  height: 3px; 
+  background-image: 
+    repeating-linear-gradient(to right, 
+      #FFFCA4, 
+      #FFFCA4 1px, 
+      transparent 1px, 
+      transparent 2px
+    );
+  background-size: 4px 4px; 
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%; /* Make logo container take full width */
+}
+
+.logo img {
+  height: 65px;
+  margin-right: 10px;
+  margin-left: 14px; 
+}
+
+#logo-image {
+  transition: transform 0.1s ease; /* Add a transition for the transform property */
+}
+
+#logo-image:active { 
+  transform: rotate(360deg); /* Rotate 360 degrees */
+  transition: transform 0.5s ease; /* Adjust transition duration to 1 second */
+}
+
+.logo h1 {
+  font-family: 'Made Sunflower';
+  font-size: 40px;
+  margin: 0;
+  color: #fffca4;
+}
+
+#top {
+  align-items: flex-start; 
+
+}
+
+nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0px 0px 0px 0px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin-bottom: 23px; /* Add space between list items */
+  width: 100%;
+}
+
+nav li a {  
+  display: inline-block;
+  padding: 15px 40px 15px 40px;
+  background-color: #fffca4;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 37px; 
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  width: 390px;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.30), 0px 15px 12px 0px rgba(0, 0, 0, 0.22);
+}
+
+nav li a:hover {
+  transform: scale(1.1); /* Increase scale on hover */
+}
+
+
+
+@media (max-width: 768px) { 
+  .body {
+    height: 100%;
+    margin: 0;
+    overflow-y: scroll; /* Allow vertical scrolling but hide the scrollbar */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  body::-webkit-scrollbar { /* Chrome, Safari and Opera */
+    display: none;
+  }
+  
+  
+  .hero { 
+    background-image: url("/images/content/aarhus-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%; 
+    max-width: 1000px;
+    margin: 0; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    position: relative; /* To position the pseudo-element */
+    padding-bottom: 150px;
+  }
+  
+  header { /* Add styles for the header background */
+    background-color: rgba(213, 155, 122, 0.58);
+    padding: 20px;
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box; /* Include padding in the width calculation */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative; 
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%; /* Make logo container take full width */
+  }
+
+  .logo h1 {
+    font-family: 'Made Sunflower';
+    font-size: 40px;
+    margin: 0;
+    color: #fffca4;
+    text-align: left;
+  }
+  
+  .logo img {
+    height: 85px;
+    margin-right: 10px;
+    margin-left: 14px; 
+  }
+  
+  
+  #top {
+    align-items: flex-start; 
+  
+  }
+  
+  nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  nav li {
+    margin-bottom: 23px; /* Add space between list items */
+    width: 100%;
+  }
+  
+  nav li a {  
+    display: inline-block;
+    padding: 15px 40px 15px 40px;
+    background-color: #fffca4;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 37px; 
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    width: 400px;
+    transition: none;
+    box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.30), 0px 15px 12px 0px rgba(0, 0, 0, 0.22);
+  }
+  
+  nav li a:hover {
+    transform: none; /* Increase scale on hover */
+  }
+}
+
+
+/* ------------------------------ KIND BEAN TOUR ---------------------------------*/
+
+#kind-bean-tour {
+  background-color: #fff6ef;
+  padding: 20px;
+  text-align: center;
+  padding-top: 50px;
+  background-image: 
+  linear-gradient(to right, #FFFCA4, #FFFCA4 10px, transparent 10px, transparent 20px), /* Top border (yellow) */
+  repeating-linear-gradient(to right, 
+    #9B87A2, 
+    #9B87A2 10px, 
+    transparent 10px, 
+    transparent 20px
+  ); /* Bottom border */
+  background-position: left top, 
+                      left bottom; 
+  background-repeat: repeat-x, 
+                    repeat-x; 
+  background-size: 20px 15px, /* Adjust size for the top border as needed */
+                  20px 15px; /* Adjust size for the bottom border as needed */
+}
+
+
+#kind-bean-tour h2 {
+  display: block; /* Use inline-flex to align icons */
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 20px;
+
+}
+
+#kind-bean-tour h2 img {
+  height: 25px;
+  margin: 0;
+  vertical-align: 3px;
+}
+
+#kind-bean-tour h2 img:first-child { /* Select the first image */
+  transform: scaleX(-1); /* Mirror the image horizontally */
+}
+
+.text-box {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 19px;
+  display: inline-block;
+  width: 446px; /* Adjust width as needed */
+  margin: 10px; /* Add some margin between the boxes */
+  vertical-align: top;
+  text-align: justify;
+}
+
+.choose {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 19px;
+  margin-bottom: 100px;
+}
+
+
+
+.flex-boxes {
+  display: flex; /* Enable flexbox for the container */
+  justify-content: center; /* Center the flex boxes horizontally */
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  width: 100%; 
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.flex-box {
+  width: 350px; 
+  height: 520px; 
+  margin: 10px 10px; /* Add space between the boxes */
+  text-align: center; /* Center the content within each box */
+  border: 1px solid #ccc; /* Add a 1px solid border */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16), 0px 3px 6px 0px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+
+}
+
+
+.flex-box:hover {
+  transform: scale(1.1); /* Increase the scale on hover */
+}
+
+.flex-box img {
+  margin-top: 30px;
+  height: 380px;
+  width: 85%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.flex-box .text-box {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  width: 85%;
+  margin-top: -30px;
+  margin-bottom: -15px;
+
+}
+
+.flex-box:nth-child(1), /* Select the first flex box */
+.flex-box:nth-child(3) { /* Select the third flex box */
+  margin-top: -50px;
+}
+
+.right-text-box {
+  text-align: justify; 
+  margin-top: 20px;
+  width: 450px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 19px;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+
+  .text-box {
+    font-size: 22px;
+  }
+  
+  .choose {
+    font-size: 22px;
+
+  }
+  
+  .flex-boxes {
+    justify-content: center; 
+    align-items: center;
+    width: 100%; 
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  
+  .flex-box {
+    width: 450px; 
+    height: 620px; 
+    margin: 10px 10px; 
+  }
+  
+  .flex-box:hover {
+    transform: none; 
+  }
+  
+  .flex-box img {
+    margin-top: 30px;
+    height: 470px;
+    width: 85%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .flex-box .text-box {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+    text-align: justify;
+    width: 85%;
+  }
+  
+  .flex-box:nth-child(1), /* Select the first flex box */
+  .flex-box:nth-child(3) { /* Select the third flex box */
+    margin-top: 0;
+  }
+  
+  .right-text-box {
+    width: 450px;
+    font-size: 22px;
+  }
+
+}
+
+
+
+/*------------------------------------------------ Mission -----------------------------------*/
+
+#mission-statement {
+  background-color: #87A680; 
+  padding: 1px;
+  height: 600px;
+  position: relative;
+}
+#mission-statement::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0; 
+  width: 100%;
+  height: 15px; 
+  background-image: 
+    repeating-linear-gradient(to right, 
+      #9B87A2, 
+      #9B87A2 10px, 
+      transparent 10px, 
+      transparent 20px
+    );
+  z-index: 2; /* Ensure it's above the image */
+}
+
+#mission-statement::after { /* Create another pseudo-element for the bottom border */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Position at the bottom */
+  width: 100%;
+  height: 15px; 
+  background-image: 
+    repeating-linear-gradient(to right, 
+      #D59B7A, /* Replace with your desired color */
+      #D59B7A 10px, 
+      transparent 10px, 
+      transparent 20px
+    );
+  z-index: 2; 
+}
+
+#mission-statement .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Vertically align items */
+  margin-left: 100px;
+}
+
+#mission-statement .text-box h2 {
+  text-decoration: none;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+#mission-statement .text-box {
+width: 600px;
+height: 500px;
+font-size: 19px;
+}
+
+#mission-statement .image {
+  width: 50%;
+  height: auto;
+}
+
+
+#mission-statement .image img {
+  max-width: 100%; 
+  height: 600px;
+  object-fit: cover;
+}
+
+
+
+@media (max-width: 768px) {
+
+  #mission-statement {
+    background-color: #87A680; 
+    padding: 0; /* Remove padding */
+    height: auto; /* Allow section height to adjust based on content */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align content horizontally */
+    width: 100%; /* Ensure section spans the full width of the container */
+    box-sizing: border-box; /* Include padding and borders in the width calculation */
+  }
+
+  #mission-statement .content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align horizontally */
+    text-align: center; /* Center align text */
+    width: 100%; /* Ensure content spans full section width */
+    margin: 0; /* Remove margins */
+  }
+
+  #mission-statement .text-box {
+    width: 90%; /* Limit text width for readability */
+    max-width: 900px; /* Ensure text doesn't stretch too much */
+    font-size: 23px; /* Adjust font size */
+    margin-bottom: 20px; /* Add spacing below text box */
+  }
+
+  #mission-statement .image {
+    width: 100%; /* Ensure the image container spans the full section width */
+    position: static; /* Ensure normal flow positioning */
+    margin-top: 20px; /* Add spacing above the image */
+    box-sizing: border-box; /* Prevent any overflow */
+  }
+
+  #mission-statement .image img {
+    width: 100%; /* Ensure the image fills the container's width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image covers the container without distortion */
+    display: block; /* Avoid inline-block spacing issues */
+    margin-top: 40px;
+  }
+
+  #mission-statement .text-box {
+    width: 80%; /* Limit text width for readability */
+    max-width: 900px; /* Ensure text doesn't stretch too much */
+    font-size: 23px; /* Adjust font size */
+    margin-bottom: 220px; /* Add spacing below text box */
+  }
+}
+
+
+/*------------------------------------------------ COMMUNITY -----------------------------------*/
+
+#community {
+  background-color: #9B87A2; 
+  padding: 20px;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+}
+#community::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0; 
+  width: 100%;
+  height: 15px; 
+  background-image: 
+    repeating-linear-gradient(to right, 
+      #D59B7A, 
+      #D59B7A 10px, 
+      transparent 10px, 
+      transparent 20px
+    );
+  z-index: 2; /* Ensure it's above the image */
+}
+
+#community::after { /* Create another pseudo-element for the bottom border */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Position at the bottom */
+  width: 100%;
+  height: 15px; 
+  background-image: 
+    repeating-linear-gradient(to right, 
+      #FFF6EF, /* Replace with your desired color */
+      #FFF6EF 10px, 
+      transparent 10px, 
+      transparent 20px
+    );
+  z-index: 2; 
+}
+
+#community .content {
+  display: flex; /* Enable flexbox for the content */
+  justify-content: flex-start; /* Space between text and image */
+  align-items: center; /* Vertically align items */
+  margin-right: 100px;
+  margin-top: 20px;
+}
+
+#community .text-box h2 {
+  text-decoration: none;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+#community .text-box {
+  width: 600px;
+  height: 500px;
+  font-size: 19px;
+  margin-left: auto;
+  color: white;
+}
+
+#community .image-community {
+  width: 100%;
+  height: auto; /* Let the height adjust accordingly */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center the image horizontally */
+  z-index: 1; /* Ensure the image is behind the content */
+}
+
+
+#community .image-community img {
+  max-width: 50%; 
+  height: auto;
+  object-fit: cover;
+}
+
+.text-box  ul {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 30px;
+  list-style-type: disc;
+  color: #FFFCA4;
+}
+
+.text-box li a {  
+  color: #FFFCA4;
+  text-decoration: none;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.text-box li a:hover { 
+  text-decoration: underline; 
+}
+
+#community .text-box button {
+  background-color: #fffca4; /* Example background color */
+  border-radius: 5px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px 40px 15px 40px;
+  margin-top: 20px;
+  background-color: transparent; /* Make the background transparent */
+  border: 4px solid #fffca4;
+  color: #FFFCA4;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 37px; 
+  width: 100%;
+  font-size: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+
+  #community {
+    height: auto; /* Let the height adjust to content */
+    padding-bottom: 300px;
+    padding-top: 0;
+    margin: 0;
+  }
+
+  #community .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content at the top */
+    text-align: center; /* Center text on small screens */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  #community .text-box {
+    width: 80%;
+    max-width: 900px;
+    font-size: 23px;
+    margin-bottom: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  #community .image-community {
+    width: 1200px;
+    position: static; /* Image should now flow with the content */
+    transform: none; /* Remove centering */
+    margin: 0;
+    padding: 0;
+  }
+
+  #community .image-community img {
+    width: auto;
+    height: 500px; /* Maintain aspect ratio */
+  }
+
+  #community .text-box button {
+    font-size: 23px;
+  }
+  
+}
+
+/*----------------------------------------------- ABOUT ME ---------------------------------------*/
+
+#about-me {
+  background-color: #D59B7A;
+  padding: 20px;
+  text-align: center;
+  padding-top: 30px;
+  background-image: 
+  linear-gradient(to right, #FFF6EF, #FFF6EF 10px, transparent 10px, transparent 20px), /* Top border (yellow) */
+  repeating-linear-gradient(to right, 
+    #9B87A2, 
+    #9B87A2 10px, 
+    transparent 10px, 
+    transparent 20px
+  ); /* Bottom border */
+  background-position: left top, 
+                      left bottom; 
+  background-repeat: repeat-x, 
+                    repeat-x; 
+  background-size: 20px 15px, /* Adjust size for the top border as needed */
+                  20px 15px; /* Adjust size for the bottom border as needed */
+}
+
+#about-me h2 {
+  display: block; /* Use inline-flex to align icons */
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#about-me .text-boxes { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#about-me .text-box {
+  width: 48%; /* Adjust width as needed */
+  margin: 10px; /* Add space between the boxes */
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 19px;
+  text-align: justify;
+}
+
+.highlight {
+  color: #FFFCA4; 
+  padding: 0.2em; 
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#about-me .images {
+  /* ... other styles ... */
+  justify-content: center; 
+  margin-top: 20px; 
+  width: 80%; /* Adjust the width of the image container */
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+}
+
+#about-me .images img {
+  width: 20%; 
+  margin: 0 10px; 
+}
+
+#about-me .images img {
+  /* ... other image styles ... */
+  transition: transform 0.3s ease; 
+}
+
+#about-me .images img.enlarged {
+  transform: scale(1.5); 
+}
+
+@media (max-width: 768px) {
+
+  #about-me {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  #about-me h2 {
+    font-size: 30px; /* Adjust font size for small screens */
+    margin-bottom: 20px;
+  }
+
+  #about-me .text-boxes {
+    display: flex;
+    flex-direction: column; 
+    width: 80%; 
+    margin-bottom: 40px; 
+    padding: 0;
+
+  }
+
+  #about-me .text-box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 23px;
+    text-align: justify;
+  }
+
+  .highlight {
+    color: #FFFCA4;
+    padding: 0.2em;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  #about-me .images {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Allow images to take full width */
+    margin-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  #about-me .images img {
+    width: 35%; 
+    margin: 10px 0; 
+  }
+
+  /* If you want the iframe to also adjust in width for mobile devices */
+  iframe {
+    width: 90%; /* Adjust the width of the iframe to fit the screen */
+    height: 200px; /* Adjust height accordingly */
+    margin: 20px 0;
+  }
+  
+  #about-me .images img {
+    /* ... other image styles ... */
+    transition: transform 0.3s ease; 
+  }
+  
+  #about-me .images img.enlarged {
+    transform: scale(1.5); /* Increase the size of the image */
+    cursor: zoom-out; /* Change the cursor to indicate that the image can be clicked again to shrink */
+  }
+}
+
+/*-------------------------------------CONTACT ME ------------------------------------*/
+
+#contact-me {
+  display: flex;
+  flex-direction: column;
+  background-color: #87A680;
+  padding: 20px;
+  text-align: center;
+  padding-top: 50px;
+  background-image: 
+  linear-gradient(to right, #9B87A2, #9B87A2 10px, transparent 10px, transparent 20px),
+  repeating-linear-gradient(to right, 
+    #FFFCA4, 
+    #FFFCA4 10px, 
+    transparent 10px, 
+    transparent 20px
+  ); /* Bottom border */
+  background-position: left top, 
+                      left bottom; 
+  background-repeat: repeat-x, 
+                    repeat-x; 
+  background-size: 20px 15px, 
+                  20px 15px; 
+}
+
+#contact-me h2{
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#contact-me p{
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 19px;
+  text-align: justify;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+
+
+#contact-me .contact-form {
+  align-items: center;
+  text-align: left;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 19px;
+  width: fit-content;
+  margin-left: 100px;
+  position: relative;
+  
+}
+
+#contact-me .contact-form form {
+  display: flex;
+  flex-direction: column; 
+}
+
+#contact-me label,
+#contact-me textarea,
+#contact-me input[type="submit"] {
+  display: block; /* Stack the form elements vertically */
+  margin-bottom: 10px; 
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 19px;
+}
+
+
+#contact-me label + textarea { /* Select textareas that come after a label */
+  width: 500px; /* Adjust width as needed */
+}
+
+#contact-me textarea {
+  border-radius: 37px;
+  height: 50px;
+  padding: 9px;
+  box-sizing: border-box;
+  width: 500px;
+  align-items: center;
+}
+
+#contact-me textarea:focus {
+  outline-color: #FFFCA4;
+}
+
+#contact-me #user-name { /* Target the new textarea specifically */
+  width: 300px;
+}
+
+#contact-me .name-and-submit { /* New container for name and submit button */
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+
+#contact-me input[type="submit"] {
+  display: block;
+  margin-bottom: 40px;
+  height: 50px;
+  background-color: #fffca4;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 37px;
+  cursor: pointer;
+  width: 185px; 
+  font-weight: 500;
+  border: none;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+}
+
+#contact-me label + input[type="email"] { 
+  width: 500px; /* Match the width of the textarea */
+  height: 50px;  /* Match the height of the textarea */
+  padding: 10px; /* Add some padding */
+  border-radius: 37px; /* Add the same border radius */
+  font-family: 'Zen Maru Gothic', sans-serif; /* Set the font family */
+  font-size: 19px;
+  box-sizing: border-box; /* Include padding and border in the element's total height and width */
+  margin-bottom: 10px;
+}
+
+#contact-me .newsletter-form label { /* Target the label specifically */
+  width: 500px; /* Adjust the width as needed */
+  text-align: left;
+}
+
+#contact-me .newsletter-form form {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; /* Align the newsletter form elements to the left */
+  margin-left: 100px;
+}
+
+#contact-me .newsletter-form {
+  position: static;
+  margin-top: 0 ;
+  margin-bottom: 50px;
+}
+
+
+#contact-me .contact-content {
+  display: flex;
+  justify-content: space-between; /* Space between form and social media */
+  align-items: flex-start;
+}
+
+#contact-me .social-media {
+  display: inline-flex;
+  flex-direction: column; /* Stack icons vertically */
+  align-items: flex-start; /* Center the icons horizontally */
+  margin-right: 300px;
+  margin-top: 0;
+  width: fit-content;
+}
+
+#contact-me .social-icon {
+  display: inline-flex;
+  flex-direction: row; /* Stack icon and text vertically */
+  align-items: center; /* Center the icon and text horizontally */
+  margin-bottom: 5px; /* Add space between icons */
+  white-space: nowrap;
+}
+
+#contact-me .social-icon img {
+  width: 45px; /* Adjust icon size as needed */
+  height: auto;
+  margin-right: 10px;
+}
+
+#contact-me .social-icon p {
+  margin: 0; 
+  color: #FFFCA4;
+}
+
+.social-media a { /* Target the <a> tag within .social-media */
+  display: inline-flex;
+  flex-direction: row; 
+  align-items: center; 
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.social-media a:hover { /* Add a hover state for the links */
+  text-decoration: underline;
+  color: #FFFCA4;
+}
+
+#contact-me .social-media p { 
+  margin-bottom: 0px; /* Adjust this value to reduce the spacing */
+  width: 250px;
+  align-self: flex-start;
+}
+
+#top-link {
+  position: fixed; /* Fix the icon to the viewport */
+  bottom: 40px; /* Adjust distance from the bottom */
+  right: 45px; /* Adjust distance from the right */
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+#top-link img {
+  height: 70px;
+  }
+
+
+
+@media (max-width: 768px) {
+
+  #contact-me {
+    display: flex;
+    flex-direction: column;
+    background-color: #87A680;
+    padding: 20px;
+    text-align: center;
+    padding-top: 50px;
+    background-image: 
+    linear-gradient(to right, #9B87A2, #9B87A2 10px, transparent 10px, transparent 20px),
+    repeating-linear-gradient(to right, 
+      #FFFCA4, 
+      #FFFCA4 10px, 
+      transparent 10px, 
+      transparent 20px
+    ); /* Bottom border */
+    background-position: left top, 
+                        left bottom; 
+    background-repeat: repeat-x, 
+                      repeat-x; 
+    background-size: 20px 15px, 
+                    20px 15px; 
+  }
+
+  #contact-me .contact-content {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center the form and social media icons */
+    width: 100%;
+    gap: 20px;
+    font-size: 23px;
+
+  }
+  
+  #contact-me h2{
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  #contact-me p{
+    width: 80%;
+    padding: 10px;
+    font-size: 23px;
+    text-align: justify;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+  }
+  
+  #contact-me .contact-form {
+    align-items: flex-start;
+    text-align: left;
+    font-size: 23px;
+    width: 100%;
+    margin: 0;
+    padding-left: 15px;
+  }
+  
+  #contact-me .contact-form form {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  #contact-me label,
+  #contact-me textarea,
+  #contact-me input[type="submit"] {
+    display: block; /* Stack the form elements vertically */
+    margin-bottom: 10px; 
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 23px;
+  }
+  
+  
+  #contact-me label + textarea { /* Select textareas that come after a label */
+    width: 500px; /* Adjust width as needed */
+  }
+  
+  #contact-me textarea {
+    border-radius: 37px;
+    height: 60px;
+    padding: 9px;
+    box-sizing: border-box;
+    width: 500px;
+    align-items: center;
+  }
+  
+  #contact-me textarea:focus {
+    outline-color: #FFFCA4;
+  }
+  
+  #contact-me #user-name { /* Target the new textarea specifically */
+    width: 50%;
+  }
+  
+  #contact-me .name-and-submit { /* New container for name and submit button */
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  
+  
+  #contact-me input[type="submit"] {
+    display: block;
+    margin-bottom: 40px;
+    height: 60px;
+    background-color: #fffca4;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 37px;
+    cursor: pointer;
+    width: 185px; 
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+  }
+  
+  #contact-me label + input[type="email"] { 
+    width: 500px; /* Match the width of the textarea */
+    height: 60px;  /* Match the height of the textarea */
+    padding: 10px; /* Add some padding */
+    border-radius: 37px; /* Add the same border radius */
+    font-family: 'Zen Maru Gothic', sans-serif; /* Set the font family */
+    font-size: 23px;
+    box-sizing: border-box; /* Include padding and border in the element's total height and width */
+    margin-bottom: 10px;
+  }
+  
+  #contact-me .newsletter-form label { /* Target the label specifically */
+    width: 500px; /* Adjust the width as needed */
+    text-align: left;
+  }
+  
+  #contact-me .newsletter-form form {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-left: 0;
+    padding-left: 15px;
+  }
+  
+  #contact-me .newsletter-form {
+    position: static;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  
+  
+  #contact-me .contact-content {
+    display: flex;
+    justify-content: space-between; /* Space between form and social media */
+    align-items: flex-start;
+  }
+  
+  #contact-me .social-media {
+    display: inline-flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding-left: 15px;
+  }
+  
+  #contact-me .social-icon {
+    display: inline-flex;
+    flex-direction: row; /* Stack icon and text vertically */
+    align-items: center; /* Center the icon and text horizontally */
+    margin-bottom: 5px; /* Add space between icons */
+    white-space: nowrap;
+  }
+  
+  #contact-me .social-icon img {
+    width: 45px; /* Adjust icon size as needed */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  #contact-me .social-icon p {
+    margin: 0; 
+    color: #FFFCA4;
+  }
+  
+  .social-media a { /* Target the <a> tag within .social-media */
+    display: inline-flex;
+    flex-direction: row; 
+    align-items: center; 
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+  .social-media a:hover { /* Add a hover state for the links */
+    text-decoration: underline;
+    color: #FFFCA4;
+  }
+  
+  #contact-me .social-media p { 
+    margin-bottom: 0px; /* Adjust this value to reduce the spacing */
+    width: 250px;
+    align-self: flex-start;
+  }
+  
+  #top-link {
+    position: fixed; /* Fix the icon to the viewport */
+    bottom: 40px; /* Adjust distance from the bottom */
+    right: 45px; /* Adjust distance from the right */
+    z-index: 10; /* Ensure it's above other elements */
+    overflow: hidden;
+  }
+  
+  #top-link img {
+    height: 71px;
+    }
+
+  }

@@ -1,0 +1,1790 @@
+/*---------------------------- HERO -------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap');
+
+@font-face {
+  font-family: 'Made Sunflower';
+  src: url('/fonts/MADE\ Sunflower\ PERSONAL\ USE.otf') format('woff2');
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  overflow-y: hidden; /* Prevent scrolling on the html element */
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll; /* Allow vertical scrolling but hide the scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar { /* Chrome, Safari and Opera */
+  display: none;
+}
+
+
+.hero { 
+  background-image: url("/images/content/aarhus.JPEG");
+  background-size: 100% 100%; /* Show the whole image */
+  background-repeat: no-repeat;
+  min-height: 600px; 
+  max-width: 4000px;
+  margin: 0; 
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  text-align: center;
+  position: relative; /* To position the pseudo-element */
+  padding-bottom: 50px;
+}
+
+.hero::after { 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position at the bottom */
+    width: 100%;
+    height: 15px; 
+    background-image: 
+      repeating-linear-gradient(to right, 
+        #FFFCA4, /* Use your desired color */
+        #FFFCA4 10px, 
+        transparent 10px, 
+        transparent 20px
+      );
+    z-index: 1; /* Ensure it's above the background image */
+  }
+
+.logo {
+    position: absolute; /* Position it relative to the hero section */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 10; /* Ensure the logo is on top of other content */
+}
+
+.logo img {
+  height: 70px;
+}
+
+#logo-image {
+  transition: transform 0.1s ease; /* Add a transition for the transform property */
+}
+
+#logo-image:active { 
+  transform: rotate(360deg); /* Rotate 360 degrees */
+  transition: transform 0.5s ease; /* Adjust transition duration to 1 second */
+}
+
+nav {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align to the left */
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%); /* Center it vertically */
+  z-index: 10; /* Make sure the nav is above content */
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav li {
+margin-bottom: 23px; /* Add space between list items */
+width: 100%;
+}
+
+nav li a {  
+display: inline-block;
+padding: 15px 40px 15px 40px;
+background-color: #fffca4;
+color: black;
+text-decoration: none;
+text-align: center;
+border-radius: 37px; 
+width: 390px;
+font-family: 'Zen Maru Gothic', sans-serif;
+font-weight: bold;
+font-size: 20px;
+transition: transform 0.3s ease;
+box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.30), 0px 15px 12px 0px rgba(0, 0, 0, 0.22);
+}
+
+nav li a:hover {
+  transform: scale(1.1); /* Increase scale on hover */
+}
+
+.hero .cafe-name {
+    position: absolute;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    font-family: 'Made Sunflower';
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 90px;
+    color: #fffca4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional shadow for readability */
+}
+
+
+@media (max-width: 768px) {
+    .hero { 
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100%; 
+        max-width: 1000px;
+        margin: 0; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+        position: relative; /* To position the pseudo-element */
+        padding-bottom: 150px;
+      }
+    
+      .logo h1 {
+        font-family: 'Made Sunflower';
+        font-size: 40px;
+        margin: 0;
+        color: #fffca4;
+        text-align: left;
+      }
+      
+      .logo img {
+        height: 85px;
+        margin-right: 5px;
+        margin-left: 5px; 
+      }
+
+      .logo {
+        position: absolute; /* Position it relative to the hero section */
+        top: 15px; /* Distance from the top */
+        right: 10px; /* Distance from the right */
+        z-index: 10; /* Ensure the logo is on top of other content */
+    }
+      
+    #top {
+      align-items: flex-start; 
+    
+    }
+    
+    nav {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      box-sizing: border-box;
+    }
+    
+    nav ul {
+      list-style: none;
+      padding: 0px 0px 0px 0px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    
+    nav li {
+      margin-bottom: 23px; /* Add space between list items */
+      width: 100%;
+    }
+    
+    nav li a {  
+      display: inline-block;
+      padding: 15px 40px 15px 40px;
+      background-color: #fffca4;
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 37px; 
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      width: 400px;
+      transition: none;
+      box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.30), 0px 15px 12px 0px rgba(0, 0, 0, 0.22);
+    }
+      
+      nav li a:hover {
+        transform: none; /* Increase scale on hover */
+      }
+
+      .hero .cafe-name {
+        position: absolute;
+        top: 150px; /* Distance from the bottom */
+        right: 0; /* Distance from the right */
+        font-family: 'Made Sunflower';
+        text-align: center;
+        letter-spacing: 5px;
+        font-weight: bold;
+        font-size: 60px;
+        color: #fffca4;
+        text-shadow: none; 
+    }
+}
+
+
+
+/* --------------------------------------- KIND BEAN TOUR ------------------------------------*/
+
+#kind-bean-tour {
+  background-color: #fff6ef;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  height: auto;
+  margin-bottom: 0;
+  background-image: 
+  linear-gradient(to right, #FFFCA4, #FFFCA4 10px, transparent 10px, transparent 20px), /* Top border (yellow) */
+  repeating-linear-gradient(to right, 
+  #87A680, 
+  #87A680 10px, 
+    transparent 10px, 
+    transparent 20px
+  ); /* Bottom border */
+  background-position: left top, 
+                      left bottom; 
+  background-repeat: repeat-x, 
+                    repeat-x; 
+  background-size: 20px 15px, /* Adjust size for the top border as needed */
+                  20px 15px; /* Adjust size for the bottom border as needed */
+}
+
+
+#kind-bean-tour h2 {
+  display: block; /* Use inline-flex to align icons */
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 20px;
+
+}
+
+#kind-bean-tour h2 img {
+  height: 25px;
+  margin: 0;
+  vertical-align: 3px;
+}
+
+#kind-bean-tour h2 img:first-child { /* Select the first image */
+  transform: scaleX(-1); /* Mirror the image horizontally */
+}
+
+.text-box1 {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 19px;
+  display: inline-block;
+  width: 700px; /* Adjust width as needed */
+  vertical-align: top;
+  text-align: justify;
+}
+
+
+/* Green navigation line section */
+.nav-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;            /* Vertically align items */
+    width: 100%;                    /* Stretch across the entire width */
+    background-color: #87A680;      /* Green background */
+    padding: 10px 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+  
+.nav-link {
+    color: #FFFCA4;
+    text-decoration: none;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    padding: 20px 60px;
+    transition: background-color 0.3s ease;
+}
+  
+.nav-link:hover {
+    text-decoration: underline;
+}
+  
+  /* Text in between the links */
+.see-also {
+    color: #FFFCA4;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Main Layout */
+.main-layout {
+    margin-top: 40px;
+}
+
+/* Row 1: Two text boxes and video */
+.row-1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 60px;
+}
+
+.coffee-text {
+    position: relative;
+    width: 25%;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+.food-text {
+    position: relative;
+    width: 25%;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: -20px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+.video-container {
+    width: 350px;  /* Limit the max-width of the video */
+    height: 550px; /* Set a fixed height to maintain portrait aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.portrait-video {
+    width: auto;     /* Allow the width to adjust automatically */
+    height: 100%;    /* Fill the height */
+    object-fit: cover; /* Ensure the video covers the area without stretching */
+}
+
+/* Row 2: Image on the left, Text boxes stacked on the right */
+.row-2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align items to the top */
+    gap: 10px; /* Space between text boxes and image */
+    margin-bottom: 40px; /* Bottom margin */
+}
+
+/* Image */
+.row-2 .image-container {
+    width: 40%; /* Set width for image container */
+    position: relative; /* Position it relatively */
+    margin-top: -150px;
+    margin-left: 150px;
+}
+
+.image-container img {
+    width: 100%; /* Make image fill container */
+    height: auto;
+    object-fit: cover; /* Ensure image covers container */
+}
+
+iframe {
+  border: none; /* Or border: 0; */
+}
+
+.atmosphere-text {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+    margin-left: -30px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+.location-text {
+    position: relative;
+    padding: 20px;
+    left: 150px;
+    margin-bottom: 10px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+    margin-left: -100px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+.text-boxes-right {
+    width: 30%;
+    margin-bottom: 50px;
+    margin-left: 100px;
+}
+
+
+/* Row 3: Text boxes on the left and image on the right */
+.row-3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kindness-text {
+    position: relative;
+    left: 120px;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+.summary-text {
+    position: relative;
+    padding: 10px;
+    left: 70px;
+    margin-bottom: 10px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: justify;
+}
+
+.text-boxes-left {
+    width: 30%;
+    margin-left: 100px;
+}
+
+
+.row-3 .image-container {
+    width: 40%;
+    position: relative; 
+    margin-top: -100px;
+    margin-right: 150px;
+    margin-bottom: 100px;
+}
+
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.rating-item {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.2em; 
+}
+
+.rating-icons {
+    display: flex;
+    gap: 5px; /* Space between beans */
+}
+
+.rating-icons img {
+    width: 20px; /* Size of the bean icons */
+    height: auto;
+}
+
+#social-media-box {
+    position: relative; 
+    margin-top: 40px; 
+}
+
+.social-media-box {
+    text-align: left;
+    position: absolute;
+    bottom: 50px; /* Distance from the bottom */
+    right: 100px; /* Distance from the right */
+    width: 200px; /* Adjust the width of the social media box as needed */
+}
+
+.social-media-box p {
+    font-size: 19px; /* Font size for the title */
+    margin: 0;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    padding-bottom: 10px; /* Space between title and icons */
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Stack the icons vertically */
+    gap: 10px; /* Space between the icons */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+.social-icon img {
+    width: 37px; /* Icon size */
+    height: 37px; /* Icon size */
+    margin-right: 10px;
+}
+
+.social-icon p {
+    font-size: 19px; /* Font size for the social media name */
+    margin: 0;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px; 
+
+}
+
+.social-icons a { /* Target the <a> tag within .social-media */
+    display: inline-flex;
+    flex-direction: row; 
+    align-items: center; 
+    text-decoration: none; 
+    color: inherit; 
+    width: 100%;
+  }
+  
+  .social-icons a:hover { /* Add a hover state for the links */
+    text-decoration: underline;
+    color: #000000;
+  }
+
+  @media (max-width: 768px) {
+    #kind-bean-tour {
+        background-color: #fff6ef;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 60px;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        height: auto;
+        margin-bottom: 0;
+        background-image: 
+        linear-gradient(to right, #FFFCA4, #FFFCA4 10px, transparent 10px, transparent 20px), /* Top border (yellow) */
+        repeating-linear-gradient(to right, 
+        #87A680, 
+        #87A680 10px, 
+          transparent 10px, 
+          transparent 20px
+        ); /* Bottom border */
+        background-position: left top, 
+                            left bottom; 
+        background-repeat: repeat-x, 
+                          repeat-x; 
+        background-size: 20px 15px, /* Adjust size for the top border as needed */
+                        20px 15px; /* Adjust size for the bottom border as needed */
+      }
+      
+      
+      #kind-bean-tour h2 {
+        display: block; /* Use inline-flex to align icons */
+        align-items: center;
+        color: black;
+        text-decoration: none;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        font-weight: bold;
+        font-size: 40px;
+        margin-bottom: 20px;
+      
+      }
+      
+      #kind-bean-tour h2 img {
+        height: 25px;
+        margin: 0;
+        vertical-align: 3px;
+      }
+      
+      #kind-bean-tour h2 img:first-child { /* Select the first image */
+        transform: scaleX(-1); /* Mirror the image horizontally */
+      }
+      
+      .text-box1 {
+        padding: 10px;
+        margin-bottom: 10px;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        font-size: 23px;
+        display: inline-block;
+        width: 80%; /* Adjust width as needed */
+        vertical-align: top;
+        text-align: justify;
+      }
+      
+      
+      /* Green navigation line section */
+    .nav-line {
+          display: flex;
+          justify-content: center;
+          align-items: center; 
+          width: 100%;  
+          background-color: #87A680; 
+          margin-top: 20px;
+          margin-bottom: 50px;
+      }
+        
+    .nav-link {
+          color: #FFFCA4;
+          text-decoration: none;
+          width: 100%;
+          font-family: 'Zen Maru Gothic', sans-serif;
+          font-weight: bold;
+          font-size: 23px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          padding-left: 0;
+          padding-right: 0;
+          margin: 0;
+          transition: background-color 0.3s ease;
+      }
+
+    .see-also {
+        color: #FFFCA4;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        font-size: 23px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 0;
+        margin-right: -22px;
+    }
+        
+    .row-1,
+    .row-2,
+    .row-3 {
+      flex-direction: column;
+      align-items: center; 
+    }
+  
+    /* Adjust the width for text boxes and video */
+    .coffee-text,
+    .food-text {
+      width: 80%; 
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 23px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .atmosphere-text {
+        width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 23px;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .location-text {
+      width: auto;
+      left: auto;
+      right: auto;
+      font-size: 23px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+
+
+    .kindness-text {
+        width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 23px;
+      margin: 0;
+      padding: 0;
+      left: auto;
+    }
+
+    .summary-text {
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 23px;
+      margin: 0;
+      padding: 0;
+      left: auto;
+    }
+
+
+
+    .text-boxes-right {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .text-boxes-left {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+  
+    /* Video container - adjust width */
+    .video-container {
+      width: 80%; /* Make video take full width */
+      height: 800px; /* Adjust height proportionally */
+      margin: 20px 0; /* Add margin for spacing */
+      margin-bottom: 50px;
+    }
+  
+    /* Image containers - adjust width */
+    .image-container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .image-container img {
+        width: 100%; /* Make image take full width */
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .atmosphere-text,
+    .location-text {
+    order: 1; 
+    }
+
+    .row-2 .image-container {
+        width: auto; /* Set width for image container */
+        margin-top: 50px;
+        margin-left: 0;
+        order: 2;
+    }
+    
+    .row-3 .image-container {
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 70px;
+    }
+
+  
+    /* Rating section - center the rating items */
+
+    .rating {  /* Assuming your rating box has a class or ID like .rating */
+        margin-bottom: 350px; /* Add space between the rating box and social media box */
+    }
+
+    .rating-item {
+      flex-direction: row; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      font-size: 23px;
+    }
+
+    .rating-icons {
+        display: flex;
+        gap: 5px; /* Space between beans */
+    }
+    
+    .rating-icons img {
+        width: 27px; /* Size of the bean icons */
+        height: auto;
+    }
+  
+    /* Adjust the gap between elements for mobile */
+    .row-2, .row-3 {
+      gap: 0px; /* Reduce gap between items */
+    }
+
+    #social-media-box {
+        position: relative;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .social-media-box {
+        text-align: left;
+        width: 50%;
+    }
+
+    .social-media-box p {
+        font-size: 23px; /* Font size for the title */
+        margin: 0;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        padding-bottom: 10px; /* Space between title and icons */
+    }
+    
+    .social-icons {
+        display: flex;
+        flex-direction: column; /* Stack the icons vertically */
+        gap: 10px; /* Space between the icons */
+    }
+    
+    .social-icon {
+        display: flex;
+        align-items: center; 
+        justify-content: flex-start;
+    }
+    
+    .social-icon img {
+        width: 50px; /* Icon size */
+        height: 50px; /* Icon size */
+        margin-right: 10px;
+    }
+    
+    .social-icon p {
+        font-size: 23px; /* Font size for the social media name */
+        margin: 0;
+        font-family: 'Zen Maru Gothic', sans-serif;
+    
+    }
+    
+    .social-icons a { /* Target the <a> tag within .social-media */
+        display: inline-flex;
+        flex-direction: row; 
+        align-items: center; 
+        text-decoration: none; 
+        color: inherit; 
+        width: 100%;
+      }
+} 
+
+/*------------------------------------------------ CAFE PLAYLIST -----------------------------------*/
+
+#community {
+  background-color: #D59B7A; 
+  padding: 20px;
+  height: 650px;
+  position: relative;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  overflow: hidden;
+  display: flex; /* Use flexbox for the layout */
+  align-items: center;
+}
+#community::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0; 
+  width: 100%;
+  height: 15px; 
+  background-image: 
+    repeating-linear-gradient(to right, 
+    #87A680, 
+    #87A680 10px, 
+      transparent 10px, 
+      transparent 20px
+    );
+  z-index: 2; /* Ensure it's above the image */
+}
+
+#community::after { /* Create another pseudo-element for the bottom border */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Position at the bottom */
+  width: 100%;
+  height: 15px; 
+  background-image: 
+    repeating-linear-gradient(to right, 
+    #9B87A2, /* Replace with your desired color */
+    #9B87A2 10px, 
+      transparent 10px, 
+      transparent 20px
+    );
+  z-index: 2; 
+}
+
+#community .content {
+  display: flex; /* Enable flexbox for the content */
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Vertically align items */
+  margin-left: 200px;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+
+#community .text-box h2 {
+  text-decoration: none;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+#community .text-box {
+  width: 600px;
+  height: 500px;
+  font-size: 19px;
+  z-index: 3;
+}
+
+#community .image-community {
+  width:50%;
+  position: absolute;
+  right: -290px;
+  top: 0;
+  width: 55%; /* Push the image further to the right */
+  height: 100%;
+  z-index: 1;
+}
+
+
+#community .image-community img {
+  max-width: 100%; 
+  height: 100%;
+  object-fit: cover;
+}
+
+#community .spotify-embed {
+    position: absolute;
+    bottom: 20px;  /* Adjust top distance */
+    left: 200px; /* Adjust left distance */
+    z-index: 5; /* Ensure it sits on top of the image */
+  }  
+
+#community .text-box button {
+  background-color: #fffca4; /* Example background color */
+  border-radius: 5px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px 40px 15px 40px;
+  margin-top: 20px;
+  background-color: transparent; /* Make the background transparent */
+  border: 4px solid #fffca4;
+  color: #FFFCA4;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 37px; 
+  width: 100%;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    #community {
+        position: relative;
+        height: auto; /* Let the height adjust to content */
+        padding: 0; /* Remove extra padding */
+        display: flex;
+        flex-direction: column; /* Stack the text and image */
+        justify-content: flex-start;
+    }
+
+    #community .content {
+        display: flex;
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding-top: 20px;
+    }
+
+    #community .text-box {
+        width: 80%; /* Make text-box responsive */
+        max-width: 900px;
+        margin-bottom: 20px;
+        font-size: 23px;
+        text-align: justify;
+        z-index: 2; /* Ensure it stays on top of the image */
+    }
+
+    #community .image-community {
+        position: relative; /* Position image relative to the container */
+        width: 100%; /* Image spans the full width */
+        height: auto; /* Automatically adjust height */
+        z-index: 1; /* Place image below Spotify embed */
+        right: auto;
+        padding-top: 180px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    #community .image-community img {
+        width: 100%; /* Make sure image fits full width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the section while maintaining aspect */
+    }
+
+    #community .spotify-embed {
+        position: absolute; /* Overlay the embed */
+        bottom: 2%; /* Position near the bottom of the image */
+        left: 50%;
+        transform: translateX(-50%); /* Center the embed horizontally */
+        z-index: 5; /* Ensure it sits above the image */
+        width: 90%; /* Adjust to fit smaller screens */
+        height: 190px; /* Fixed height for Spotify embed */
+    }
+
+    iframe {
+        width: 100%; /* Ensure iframe spans full width */
+        height: 100%; /* Fill the embed container */
+    }
+
+    #community .text-box button {
+        background-color: #fffca4; /* Example background color */
+        border-radius: 5px;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 15px 40px 15px 40px;
+        margin-top: 20px;
+        background-color: transparent; /* Make the background transparent */
+        border: 4px solid #fffca4;
+        color: #FFFCA4;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 37px; 
+        width: 100%;
+        font-size: 23px;
+      }
+}
+
+
+
+/*------------------------------------------- LEAVE A REVIEW ---------------------------------------*/
+#leave-review-section {
+    padding: 30px;
+    background-color: #87A680;
+    text-align: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    display: flex; /* Use flexbox on the section */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center all content horizontally */
+    justify-content: flex-start;
+    background-image: 
+    linear-gradient(to right, #9B87A2, #9B87A2 10px, transparent 10px, transparent 20px), /* Top border (yellow) */
+    repeating-linear-gradient(to right, 
+    #fff6ef, 
+    #fff6ef 10px, 
+      transparent 10px, 
+      transparent 20px
+    ); /* Bottom border */
+    background-position: left top, 
+                        left bottom; 
+    background-repeat: repeat-x, 
+                      repeat-x; 
+    background-size: 20px 15px, /* Adjust size for the top border as needed */
+                    20px 15px; /* Adjust size for the bottom border as needed */
+}
+
+
+#leave-review-section h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000000; /* Set text color to dark for consistency */
+}
+
+#leave-review-section p {
+    font-size: 19px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    width: 50%;
+    text-align: left;
+}
+
+#review-form {
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    width: 100%; 
+    max-width: 800px;
+    
+}
+
+#review-form label {
+    font-size: 19px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+#review-form textarea {
+    width: 700px;
+    height: 170px;
+    font-size: 19px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 37px;
+    resize: vertical;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+#review-form textarea:focus {
+    outline-color: #FFFCA4;
+    border: 2px solid #FFFCA4;
+}
+
+#review-form button {
+    display: block;
+    margin-bottom: 40px;
+    height: 50px;
+    background-color: #fffca4;
+    color: black;
+    font-size: 19px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 37px; 
+    cursor: pointer;
+    width: 185px; 
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+}
+
+#leave-review-section h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+#submitted-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.review-item {
+    background-color: #ffffff;
+    font-size: 19px;
+    padding: 40px;
+    border: 1px solid #ffffff;
+    
+    resize: vertical;
+
+    height: auto;
+    justify-content: flex-start;
+}
+.review-item {
+    position: relative; /* Make the review item a positioned element */
+    background-color: #ffffff;
+    text-align: left;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    width: calc(40% - 10px);
+    font-size: 19px;
+    border-radius: 37px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.delete-icon {
+    position: absolute;
+    color: #D59B7A;
+    width: 30px; /* Set the width to make it bigger */
+    height: 30px; /* Set the height to make it bigger */
+    bottom: 10px; /* Adjust to position from top */
+    right: 15px; /* Adjust to position from right */
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+}
+
+#see-more {
+    background-color: #87A680; /* Same as your section background */
+    color: #FFFCA4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+}
+
+#see-more:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #leave-review-section {
+        padding: 30px;
+        background-color: #87A680;
+        text-align: center;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        display: flex; /* Use flexbox on the section */
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center all content horizontally */
+        justify-content: flex-start;
+        background-image: 
+        linear-gradient(to right, #9B87A2, #9B87A2 10px, transparent 10px, transparent 20px), /* Top border (yellow) */
+        repeating-linear-gradient(to right, 
+        #fff6ef, 
+        #fff6ef 10px, 
+          transparent 10px, 
+          transparent 20px
+        ); /* Bottom border */
+        background-position: left top, 
+                            left bottom; 
+        background-repeat: repeat-x, 
+                          repeat-x; 
+        background-size: 20px 15px, /* Adjust size for the top border as needed */
+                        20px 15px; /* Adjust size for the bottom border as needed */
+    }
+    
+    
+    #leave-review-section h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: #000000; /* Set text color to dark for consistency */
+    }
+    
+    #leave-review-section p {
+        font-size: 23px;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+        width: 90%;
+        text-align: center;
+    }
+    
+    #review-form {
+        margin-bottom: 20px;
+        align-items: center;
+        text-align: center;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        width: 100%; 
+        max-width: 800px;
+        
+    }
+    
+    #review-form label {
+        font-size: 23px;
+        display: block;
+        margin-bottom: 30px;
+    }
+    
+    #review-form textarea {
+        width: 90%;
+        height: 170px;
+        font-size: 23px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ffffff;
+        border-radius: 37px;
+        resize: vertical;
+        font-family: 'Zen Maru Gothic', sans-serif;
+    }
+    
+    #review-form button {
+        display: block;
+        margin-bottom: 40px;
+        height: 60px;
+        font-size: 22px;
+    }
+    
+    
+    #submitted-reviews {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        word-wrap: break-word;
+        gap: 30px;
+        justify-content: center;
+        padding-bottom: 20px;
+        width: 90%;
+    }
+    
+    .review-item {
+        background-color: #ffffff;
+        font-size: 19px;
+        padding: 40px;
+        border: 1px solid #ffffff;
+        
+        resize: vertical;
+    
+        height: auto;
+        justify-content: flex-start;
+    }
+    .review-item {
+        position: relative; /* Make the review item a positioned element */
+        background-color: #ffffff;
+        text-align: left;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        width: calc(90% - 10px);
+        font-size: 23px;
+        border-radius: 37px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    .delete-icon {
+        position: absolute;
+        color: #D59B7A;
+        width: 35px; /* Set the width to make it bigger */
+        height: 35px; /* Set the height to make it bigger */
+        bottom: 10px; /* Adjust to position from top */
+        right: 15px; /* Adjust to position from right */
+        cursor: pointer; /* Change cursor to pointer to indicate clickability */
+    }
+    
+    #see-more {
+        background-color: #87A680; /* Same as your section background */
+        color: #FFFCA4;
+        border: none;
+        padding: 10px 20px;
+        font-size: 25px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+    }
+}
+
+/*-------------------------------------------- CONTACT ME ------------------------------------------*/
+
+#contact-me {
+  display: flex;
+  flex-direction: column;
+  background-color: #9B87A2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  padding-top: 50px;
+  background-image: 
+  linear-gradient(to right, #fff6ef, #fff6ef 10px, transparent 10px, transparent 20px),
+  repeating-linear-gradient(to right, 
+    #FFFCA4, 
+    #FFFCA4 10px, 
+    transparent 10px, 
+    transparent 20px
+  ); /* Bottom border */
+  background-position: left top, 
+                      left bottom; 
+  background-repeat: repeat-x, 
+                    repeat-x; 
+  background-size: 20px 15px, 
+                  20px 15px; 
+}
+  
+  #contact-me h2{
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  #contact-me p{
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+    text-align: justify;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+  }
+  
+  
+  
+  #contact-me .contact-form {
+    align-items: center;
+    text-align: left;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+    width: fit-content;
+    margin-left: 100px;
+    position: relative;
+    
+  }
+  
+  #contact-me .contact-form form {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  #contact-me label,
+  #contact-me textarea,
+  #contact-me input[type="submit"] {
+    display: block; /* Stack the form elements vertically */
+    margin-bottom: 10px; 
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 19px;
+  }
+  
+  
+  #contact-me label + textarea { /* Select textareas that come after a label */
+    width: 500px; /* Adjust width as needed */
+  }
+  
+  #contact-me textarea {
+    border-radius: 37px;
+    height: 50px;
+    padding: 9px;
+    box-sizing: border-box;
+    width: 500px;
+    align-items: center;
+  }
+  
+  #contact-me textarea:focus {
+    outline-color: #FFFCA4;
+  }
+  
+  #contact-me #user-name { /* Target the new textarea specifically */
+    width: 300px;
+  }
+  
+  #contact-me .name-and-submit { /* New container for name and submit button */
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  
+  
+  #contact-me input[type="submit"] {
+    display: block;
+    margin-bottom: 40px;
+    height: 50px;
+    background-color: #fffca4;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 37px;
+    cursor: pointer;
+    width: 185px; 
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+  }
+  
+  #contact-me label + input[type="email"] { 
+    width: 500px; /* Match the width of the textarea */
+    height: 50px;  /* Match the height of the textarea */
+    padding: 10px; /* Add some padding */
+    border-radius: 37px; /* Add the same border radius */
+    font-family: 'Zen Maru Gothic', sans-serif; /* Set the font family */
+    font-size: 19px;
+    box-sizing: border-box; /* Include padding and border in the element's total height and width */
+    margin-bottom: 10px;
+  }
+  
+  #contact-me .newsletter-form label { /* Target the label specifically */
+    width: 500px; /* Adjust the width as needed */
+    text-align: left;
+  }
+  
+  #contact-me .newsletter-form form {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; /* Align the newsletter form elements to the left */
+    margin-left: 100px;
+  }
+  
+  #contact-me .newsletter-form {
+    position: static;
+    margin-top: 0 ;
+    margin-bottom: 50px;
+  }
+  
+  
+  #contact-me .contact-content {
+    display: flex;
+    justify-content: space-between; /* Space between form and social media */
+    align-items: flex-start;
+  }
+  
+  #contact-me .social-media {
+    display: inline-flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: flex-start; /* Center the icons horizontally */
+    margin-right: 300px;
+    margin-top: 0;
+    width: fit-content;
+  }
+  
+  #contact-me .social-icon {
+    display: inline-flex;
+    flex-direction: row; /* Stack icon and text vertically */
+    align-items: center; /* Center the icon and text horizontally */
+    margin-bottom: 5px; /* Add space between icons */
+    white-space: nowrap;
+  }
+  
+  #contact-me .social-icon img {
+    width: 45px; /* Adjust icon size as needed */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  #contact-me .social-icon p {
+    margin: 0; 
+    color: #FFFCA4;
+  }
+  
+  .social-media a { /* Target the <a> tag within .social-media */
+    display: inline-flex;
+    flex-direction: row; 
+    align-items: center; 
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+  .social-media a:hover { /* Add a hover state for the links */
+    text-decoration: underline;
+    color: #FFFCA4;
+  }
+  
+  #contact-me .social-media p { 
+    margin-bottom: 0px; /* Adjust this value to reduce the spacing */
+    width: 250px;
+    align-self: flex-start;
+  }
+  
+  #top-link {
+    position: fixed; /* Fix the icon to the viewport */
+    bottom: 40px; /* Adjust distance from the bottom */
+    right: 45px; /* Adjust distance from the right */
+    z-index: 10; /* Ensure it's above other elements */
+  }
+  
+  #top-link img {
+    height: 70px;
+    }
+  
+  
+  
+  @media (max-width: 768px) {
+  
+    #contact-me .contact-content {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      align-items: center; /* Center the form and social media icons */
+      width: 100%;
+      gap: 20px;
+      font-size: 23px;
+  
+    }
+    
+    #contact-me h2{
+      align-items: center;
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: white;
+    }
+    
+    #contact-me p{
+      width: 80%;
+      padding: 10px;
+      font-size: 23px;
+      text-align: justify;
+      align-items: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 100px;
+    }
+    
+    #contact-me .contact-form {
+      align-items: flex-start;
+      text-align: left;
+      font-size: 23px;
+      width: 100%;
+      margin: 0;
+      padding-left: 15px;
+    }
+    
+    #contact-me .contact-form form {
+      display: flex;
+      flex-direction: column; 
+    }
+    
+    #contact-me label,
+    #contact-me textarea,
+    #contact-me input[type="submit"] {
+      display: block; /* Stack the form elements vertically */
+      margin-bottom: 10px; 
+      font-family: 'Zen Maru Gothic', sans-serif;
+      font-size: 23px;
+    }
+    
+    
+    #contact-me label + textarea { /* Select textareas that come after a label */
+      width: 500px; /* Adjust width as needed */
+    }
+    
+    #contact-me textarea {
+      border-radius: 37px;
+      height: 60px;
+      padding: 9px;
+      box-sizing: border-box;
+      width: 500px;
+      align-items: center;
+    }
+    
+    #contact-me textarea:focus {
+      outline-color: #FFFCA4;
+    }
+    
+    #contact-me #user-name { /* Target the new textarea specifically */
+      width: 50%;
+    }
+    
+    #contact-me .name-and-submit { /* New container for name and submit button */
+      display: flex;
+      align-items: center; /* Align items vertically */
+    }
+    
+    
+    #contact-me input[type="submit"] {
+      display: block;
+      margin-bottom: 40px;
+      height: 60px;
+      background-color: #fffca4;
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 37px;
+      cursor: pointer;
+      width: 185px; 
+      font-weight: 500;
+      border: none;
+      box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+    }
+    
+    #contact-me label + input[type="email"] { 
+      width: 500px; /* Match the width of the textarea */
+      height: 60px;  /* Match the height of the textarea */
+      padding: 10px; /* Add some padding */
+      border-radius: 37px; /* Add the same border radius */
+      font-family: 'Zen Maru Gothic', sans-serif; /* Set the font family */
+      font-size: 23px;
+      box-sizing: border-box; /* Include padding and border in the element's total height and width */
+      margin-bottom: 10px;
+    }
+    
+    #contact-me .newsletter-form label { /* Target the label specifically */
+      width: 500px; /* Adjust the width as needed */
+      text-align: left;
+    }
+    
+    #contact-me .newsletter-form form {
+      display: flex;
+      flex-direction: column; 
+      align-items: flex-start;
+      margin-left: 0;
+      padding-left: 15px;
+    }
+    
+    #contact-me .newsletter-form {
+      position: static;
+      margin-top: 0;
+      margin-bottom: 50px;
+    }
+    
+    
+    #contact-me .contact-content {
+      display: flex;
+      justify-content: space-between; /* Space between form and social media */
+      align-items: flex-start;
+    }
+    
+    #contact-me .social-media {
+      display: inline-flex;
+      flex-direction: column; 
+      align-items: center; 
+      margin-top: 0;
+      margin-bottom: 40px;
+      padding-left: 15px;
+    }
+    
+    #contact-me .social-icon {
+      display: inline-flex;
+      flex-direction: row; /* Stack icon and text vertically */
+      align-items: center; /* Center the icon and text horizontally */
+      margin-bottom: 10px; /* Add space between icons */
+      white-space: nowrap;
+    }
+    
+    #contact-me .social-icon img {
+      width: 55px; /* Adjust icon size as needed */
+      height: auto;
+      margin-right: 10px;
+    }
+    
+    #contact-me .social-icon p {
+      margin: 0; 
+      color: #FFFCA4;
+    }
+    
+    .social-media a { /* Target the <a> tag within .social-media */
+      display: inline-flex;
+      flex-direction: row; 
+      align-items: center; 
+      text-decoration: none; 
+      color: inherit; 
+    }
+    
+    .social-media a:hover { /* Add a hover state for the links */
+      text-decoration: underline;
+      color: #FFFCA4;
+    }
+    
+    #contact-me .social-media p { 
+      margin-bottom: 0px; /* Adjust this value to reduce the spacing */
+      width: 250px;
+      align-self: flex-start;
+    }
+    
+    #top-link {
+      position: fixed; /* Fix the icon to the viewport */
+      bottom: 40px; /* Adjust distance from the bottom */
+      right: 45px; /* Adjust distance from the right */
+      z-index: 10; /* Ensure it's above other elements */
+      overflow: hidden;
+    }
+    
+    #top-link img {
+      height: 71px;
+      }
+  
+    }

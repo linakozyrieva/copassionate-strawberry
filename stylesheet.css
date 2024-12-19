@@ -681,6 +681,7 @@ font-size: 19px;
   font-size: 19px;
   margin-left: auto;
   color: white;
+  z-index: 4;
 }
 
 #community .image-community {

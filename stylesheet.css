@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Made Sunflower';
-  src: url('/fonts/MADE\ Sunflower\ PERSONAL\ USE.otf') format('woff2');
+  src: url('fonts/MADE\ Sunflower\ PERSONAL\ USE.otf') format('woff2');
 }
 
 html {
@@ -186,6 +186,11 @@ nav li a:hover {
   
   body::-webkit-scrollbar { /* Chrome, Safari and Opera */
     display: none;
+  }
+
+  @font-face {
+    font-family: 'Made Sunflower';
+    src: url('fonts/MADE\ Sunflower\ PERSONAL\ USE.otf') format('woff2');
   }
   
   

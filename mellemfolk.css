@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Made Sunflower';
-  src: url('/fonts/MADE\ Sunflower\ PERSONAL\ USE.otf') format('woff2');
+  src: url('fonts/MADE\ Sunflower\ PERSONAL\ USE.otf') format('woff2');
 }
 
 html {

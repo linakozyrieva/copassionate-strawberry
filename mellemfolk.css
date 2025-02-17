@@ -406,8 +406,8 @@ nav li a:hover {
 .row-2 .image-container {
     width: 40%; /* Set width for image container */
     position: relative; /* Position it relatively */
-    margin-top: -150px;
-    margin-left: 150px;
+    margin-top: -100px;
+    margin-left: 80px;
 }
 
 .image-container img {
@@ -493,7 +493,7 @@ iframe {
     width: 40%;
     position: relative; 
     margin-top: -100px;
-    margin-right: 150px;
+    margin-right: 100px;
     margin-bottom: 100px;
 }
 
@@ -928,7 +928,7 @@ iframe {
   display: flex; /* Enable flexbox for the content */
   justify-content: space-between; /* Space between text and image */
   align-items: center; /* Vertically align items */
-  margin-left: 200px;
+  margin-left: 100px;
   margin-top: 20px;
   flex-grow: 1;
 }
@@ -951,7 +951,7 @@ iframe {
 #community .image-community {
   width:50%;
   position: absolute;
-  right: -290px;
+  right: -140px;
   top: 0;
   width: 55%; /* Push the image further to the right */
   height: 100%;

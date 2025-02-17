@@ -532,7 +532,7 @@ nav li a:hover {
   flex-direction: row;
   justify-content: space-between; /* Space between text and image */
   align-items: center; /* Vertically align items */
-  margin-left: 100px;
+  margin-left: 50px;
   margin-top: 70px;
 }
 
@@ -668,7 +668,7 @@ font-size: 19px;
   display: flex; /* Enable flexbox for the content */
   justify-content: flex-start; /* Space between text and image */
   align-items: center; /* Vertically align items */
-  margin-right: 100px;
+  margin-right: 50px;
   margin-top: 20px;
 }
 

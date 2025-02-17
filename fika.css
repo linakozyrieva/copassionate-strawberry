@@ -107,7 +107,7 @@ nav li {
 
 nav li a {  
   display: inline-block;
-  padding: 15px 40px 15px 40px;
+  padding: 13px 30px;
   background-color: #fffca4;
   color: black;
   text-decoration: none;
@@ -116,7 +116,7 @@ nav li a {
   width: 390px;
   font-family: 'Zen Maru Gothic', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   transition: transform 0.3s ease;
   box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.30), 0px 15px 12px 0px rgba(0, 0, 0, 0.22);
 }
